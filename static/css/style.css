@@ -1,0 +1,11 @@
+/*base.html navbar*/
+
+.navbar-logo {
+    height: 100px; 
+    width: auto; 
+}
+
+/*homepage*/
+.index-h1 {
+    background-color: aqua;
+}
