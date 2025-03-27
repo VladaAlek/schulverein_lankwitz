@@ -62,9 +62,14 @@
   </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 My Website</p>
-  </footer>
+  {% block footerblock %}
+  <div class="d-flex justify-content-center align-items-center foot-stl bg-dark">
+    <a href="https://www.facebook.com/profile.php?id=61571470064318" target="_blank"
+      class="text-decoration-none fs-5 a-color text-white" rel="nofollow" aria-label="Facebook Page">
+      <i class="bi bi-facebook"></i> Follow us on Facebook!
+    </a>
+  </div>
+  {% endblock %}
 
   <script src="{% static 'js/script.js' %}"></script>
   <!--Bootstrap Java script-->
