@@ -3,9 +3,14 @@
 {% block title %}Termine{% endblock %}
 
 {% block content %}
-<div class="subtitle-div py-1">
-    <h5 class="index-h1 text-center text-white bg-dark">Nächste Wichtige Termine</h5>
-</div>
+{% block subtitle %}
+    <div class="subtitle-div py-1">
+        <h5 class="index-h1 text-center text-white bg-dark">
+            {% block subtitletext %}Nächste Wichtige Termine{% endblock %}
+        </h5>
+    </div>
+{% endblock %}
+
 
 
 {% endblock %}

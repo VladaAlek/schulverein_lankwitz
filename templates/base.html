@@ -62,11 +62,18 @@
 </nav>
 
 
-  <!-- Main Content -->
-  <main>
+<main>
     {% block content %}
+    {% block subtitle %}
+    <div class="subtitle-div py-1">
+        <h5 class="index-h1 text-center text-white bg-dark">
+            {% block subtitletext %}Default subtitle text{% endblock %}
+        </h5>
+    </div>
     {% endblock %}
-  </main>
+    {% endblock %}
+</main>
+
 
   <!-- Footer -->
   {% block footerblock %}
