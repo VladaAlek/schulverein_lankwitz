@@ -1,29 +1,43 @@
 /*set view height*/
 
 
-html {
+html, body {
     height: 100%;
-}
+    margin: 0;
+  }
 
+/* base.html*/
+
+body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.navbar-logo {
+    height: 100px; 
+    width: auto; 
+}
 /* cover photo*/
 main{
+    flex: 1;
     background: url('/media/cover_photo.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
-    color: #555;
     font-family: 'Lato';
 }
 
-
+.foot-stl {
+    width: 100%;
+    height: 60px; /* Adjust height as needed */
+  }
 /*Photo by <a href="https://unsplash.com/@notethanun?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">note thanun</a> on <a href="https://unsplash.com/photos/group-of-people-wearing-white-and-orange-backpacks-walking-on-gray-concrete-pavement-during-daytime-CYlPykF-qAM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
 */
 /*base.html navbar*/
 
-.navbar-logo {
-    height: 100px; 
-    width: auto; 
-}
+
+
+
 
 /*homepage*/
 .index-h1 {
