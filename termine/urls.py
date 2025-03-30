@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import termine
+from .views import all_events
 
 urlpatterns = [
-    path('', termine, name='termine')
+    path('', all_events, name='termine'),
 ]
