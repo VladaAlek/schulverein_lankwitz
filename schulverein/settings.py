@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-vladaalek-schulvereinla-aecukunhxf2.ws-eu118.gitpod.io']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-vladaalek-schulvereinla-aecukunhxf2.ws-eu118.gitpod.io'
+]
+
 
 # Application definition
 
