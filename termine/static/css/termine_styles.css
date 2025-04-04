@@ -1,0 +1,18 @@
+
+.termine-container {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.termine-bg-cover {
+    background-color: whitesmoke !important;
+    background-image: none !important;
+    flex: 1;
+    min-height: 100vh;
+}
+
+.event-card {
+    background-color: rgb(204, 198, 198);
+}

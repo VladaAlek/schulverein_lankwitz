@@ -1,40 +1,39 @@
 {% extends 'base.html' %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static '/termine/css/termine_styles.css' %}">
+
 
 
 {% block title %}Termine{% endblock %}
 
 {% block extra_styles %}
-<style>
-    .termine-bg-cover {
-        background-color: whitesmoke !important;
-        background-image: none !important;
-    }
-</style>
+<link rel="stylesheet" href="{% static '/css/termine_styles.css' %}">
 {% endblock %}
 
 {% block content %}
-<main class="termine-bg-cover">
+<div class="termine-bg-cover">
     {% block subtitle %}
     <div class="subtitle-div">
         <h5 class="index-h1 text-center text-white bg-dark">
             {% block subtitletext %}Nächste Wichtige Termine{% endblock %}
         </h5>
     </div>
+    {% endblock %}
+    {% block main_content %}
+    
     <!-- Grid and a Loop through the events and display each 'veranstaltung' -->
     <div class="container">
         <div class="row p-5 ">
             {% for event in events %}
-            <div class="col-sm-12 col-md-6">
-                <div class="event-card">
+            <div class="col-sm-12 col-md-6 mb-4">
+                <div class="event-card p-2">
                     <h3>{{ event.veranstaltung }}</h3>
-                    <p>WO? {{ event.ort }}</p>
-                    <p>WANN? {{ event.datum }}</p>
-                    <p>BEGIN ZEIT {{ event.begin_zeit }}</p>
-                    <p>END ZEIT {{ event.end_zeit }}</p>
-                    <p>WAS?{{ event.beschreibung }}</p>
+                    <hr>
+                    <p><strong>WANN?</strong> {{ event.datum }}</p>
+                    <p><strong>WO?</strong> {{ event.ort }}</p>
+                    <p><strong>BEGIN ZEIT</strong> {{ event.begin_zeit }} Uhr</p>
+                    <p><strong>END ZEIT</strong> {{ event.end_zeit }} Uhr</p>
+                    <p><strong>WAS?</strong> <br> {{ event.beschreibung }}</p>
                     <p>{{ event.foto }}</p>
                 </div>
             </div>
@@ -45,9 +44,9 @@
             {% endfor %}
         </div>
     </div>
-</main>
+</div>
 
-{% endblock %}
+    {% endblock %}
 
 
 
