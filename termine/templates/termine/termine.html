@@ -6,6 +6,15 @@
 
 {% block title %}Termine{% endblock %}
 
+{% block extra_styles %}
+<style>
+    .termine-bg-cover {
+        background-color: whitesmoke !important;
+        background-image: none !important;
+    }
+</style>
+{% endblock %}
+
 {% block content %}
 <main class="termine-bg-cover">
     {% block subtitle %}
@@ -16,7 +25,7 @@
     </div>
     <!-- Grid and a Loop through the events and display each 'veranstaltung' -->
     <div class="container">
-        <div class="row">
+        <div class="row p-5 ">
             {% for event in events %}
             <div class="col-sm-12 col-md-6">
                 <div class="event-card">
