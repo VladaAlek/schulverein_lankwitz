@@ -21,7 +21,10 @@ body {
 /*subtitle-div*/
 .subtitle-div h5 {
   margin: 0;
-  border-top: 2px solid rgb(71, 69, 69);
+  border-top: 1px solid #ac0c5b;
+  /*bordo
+  border-top: 1px #ac0c5b;
+  */
   height: 60px !important;
   display: flex;
   align-items: center; 

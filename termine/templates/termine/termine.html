@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/termine/css/termine_styles.css' %}">
+
 
 {% block title %}Termine{% endblock %}
 
 {% block content %}
-{% block subtitle %}
+<main class="termine-bg-cover">
+    {% block subtitle %}
     <div class="subtitle-div">
         <h5 class="index-h1 text-center text-white bg-dark">
             {% block subtitletext %}Nächste Wichtige Termine{% endblock %}
@@ -19,6 +24,8 @@
             <p>Keine Termine verfügbar.</p>
         {% endfor %}
     </div>
+</main>
+
 {% endblock %}
 
 
