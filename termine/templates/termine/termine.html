@@ -19,8 +19,8 @@
         </h5>
     </div>
     {% endblock %}
-    {% block main_content %}
     
+
     <!-- Grid and a Loop through the events and display each 'veranstaltung' -->
     <div class="container">
         <div class="row p-5 ">
@@ -34,7 +34,12 @@
                     <p><strong>BEGIN ZEIT</strong> {{ event.begin_zeit }} Uhr</p>
                     <p><strong>END ZEIT</strong> {{ event.end_zeit }} Uhr</p>
                     <p><strong>WAS?</strong> <br> {{ event.beschreibung }}</p>
-                    <p>{{ event.foto }}</p>
+                    {% if "placeholder" in event.featured_image.url %}
+                    <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                    {% else %}
+                    <img class="card-img-top" src=" {{ event.featured_image.url }}" alt="{{ event.veranstaltung }}">
+                    {% endif %}
+                    <p>{{ event.featured_image }}</p>
                 </div>
             </div>
             {% empty %}
@@ -46,7 +51,6 @@
     </div>
 </div>
 
-    {% endblock %}
 
 
 

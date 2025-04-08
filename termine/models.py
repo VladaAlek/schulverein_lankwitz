@@ -1,4 +1,6 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
+
 
 class Event(models.Model):
     veranstaltung = models.CharField(max_length=255)
@@ -7,7 +9,8 @@ class Event(models.Model):
     begin_zeit = models.FloatField(null=True, blank=True)
     end_zeit = models.FloatField(null=True, blank=True)
     beschreibung = models.TextField()
-    foto = models.ImageField(upload_to='event_images/', blank=True, null=True)
+    featured_image = CloudinaryField('image', default='placeholder')
+
 
     def __str__(self):
         return self.veranstaltung
