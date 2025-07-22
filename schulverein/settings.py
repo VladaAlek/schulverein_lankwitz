@@ -30,10 +30,10 @@ SECRET_KEY = 'django-insecure-ts2233^y35ecccf^5*deo5y7s@l7tyo0twu=tz(el-k_2b@a*-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-vladaalek-schulvereinla-aecukunhxf2.ws-eu118.gitpod.io']
+ALLOWED_HOSTS = ['8000-vladaalek-schulvereinla-ww3aany1h1r.ws-eu120.gitpod.io']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-vladaalek-schulvereinla-aecukunhxf2.ws-eu118.gitpod.io'
+    'https://8000-vladaalek-schulvereinla-ww3aany1h1r.ws-eu120.gitpod.io'
 ]
 
 
@@ -140,13 +140,20 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'your-cloud-name',
-    'API_KEY': 'your-api-key',
-    'API_SECRET': 'your-api-secret',
+    'CLOUD_NAME': env.CLOUDINARY_CLOUD_NAME,
+    'API_KEY': env.CLOUDINARY_API_KEY,
+    'API_SECRET': env.CLOUDINARY_API_SECRET,
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+cloudinary.config(
+    cloud_name = env.CLOUDINARY_CLOUD_NAME,
+    api_key = env.CLOUDINARY_API_KEY,
+    api_secret = env.CLOUDINARY_API_SECRET
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
