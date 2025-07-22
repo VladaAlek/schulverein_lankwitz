@@ -7,21 +7,19 @@
 {% block title %}Termine{% endblock %}
 
 {% block extra_styles %}
-<link rel="stylesheet" href="{% static '/css/termine_styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/termine_styles.css' %}">
 {% endblock %}
 
 {% block content %}
-<div class="termine-bg-cover">
-    {% block subtitle %}
+{% block subtitle %}
     <div class="subtitle-div">
         <h5 class="index-h1 text-center text-white bg-dark">
             {% block subtitletext %}Nächste Wichtige Termine{% endblock %}
         </h5>
     </div>
-    {% endblock %}
-    
+{% endblock %}
 
-    <!-- Grid and a Loop through the events and display each 'Veranstaltung' -->
+<!-- Grid and a Loop through the events and display each 'Veranstaltung' -->
     <div class="container">
         <div class="row p-5 ">
             {% for event in events %}
@@ -34,12 +32,13 @@
                     <p><strong>BEGIN ZEIT</strong> {{ event.begin_zeit }} Uhr</p>
                     <p><strong>END ZEIT</strong> {{ event.end_zeit }} Uhr</p>
                     <p><strong>WAS?</strong> <br> {{ event.beschreibung }}</p>
+                    <div class="event-image-wrapper">
                     {% if "placeholder" in event.featured_image.url %}
-                    <img class="card-img-top" src="{% static 'images/default.jpg' %}" alt="placeholder image">
+                    <img class="event-image" src="{% static 'images/default.jpg' %}" alt="placeholder image">
                     {% else %}
-                    <img class="card-img-top" src=" {{ event.featured_image.url }}" alt="{{ event.veranstaltung }}">
+                    <img class="event-image" src="{{ event.featured_image.url }}" alt="{{ event.veranstaltung }}">
                     {% endif %}
-                    <p>{{ event.featured_image }}</p>
+                    </div>
                 </div>
             </div>
             {% empty %}
@@ -49,7 +48,6 @@
             {% endfor %}
         </div>
     </div>
-</div>
 
 
 
