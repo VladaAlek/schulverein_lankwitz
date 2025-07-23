@@ -7,14 +7,17 @@
 }
 
 main {
-    background-color: whitesmoke !important;
     background-image: none !important;
     flex: 1;
     min-height: 100vh;
 }
 
+.termine-row-style {
+  background-color: whitesmoke !important;
+}
+
 .event-card {
-    background-color: rgb(204, 198, 198);
+    background-color: rgb(238, 233, 233);
 }
 
 .beschreibung-div {
