@@ -31,7 +31,9 @@
                     <p><strong>WO?</strong> {{ event.ort }}</p>
                     <p><strong>BEGIN ZEIT</strong> {{ event.begin_zeit }} Uhr</p>
                     <p><strong>END ZEIT</strong> {{ event.end_zeit }} Uhr</p>
-                    <p><strong>WAS?</strong> <br> {{ event.beschreibung }}</p>
+                    <div class="beschreibung-div">
+                        <p><strong>WAS?</strong> <br> {{ event.beschreibung }}</p>
+                    </div>
                     <div class="event-image-wrapper">
                     {% if "placeholder" in event.featured_image.url %}
                     <img class="event-image" src="{% static 'images/default.jpg' %}" alt="placeholder image">

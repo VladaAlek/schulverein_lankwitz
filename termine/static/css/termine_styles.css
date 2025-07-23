@@ -17,6 +17,10 @@ main {
     background-color: rgb(204, 198, 198);
 }
 
+.beschreibung-div {
+    height: 300px;
+}
+
 .event-image-wrapper {
   max-height: 200px;
   overflow: hidden;
