@@ -10,23 +10,34 @@
 
 {% block content %}
 {% block subtitle %}
-    <div class="subtitle-div">
-        <h5 class="index-h1 text-center text-white bg-dark">
-            {% block subtitletext %}Wir brauchen Ihre Unterstutzung{% endblock %}
-        </h5>
-    </div>
+<div class="subtitle-div">
+  <h5 class="index-h1 text-center text-white bg-dark">
+    {% block subtitletext %}Wir brauchen Ihre Unterstutzung{% endblock %}
+  </h5>
+</div>
 {% endblock %}
 <div class="container full-height-container mt-4">
-    <div class="row full-height-row">
-      <div class="col-md-6 col-lg-4 mb-3 my-div">
-        <div class="p-3 test-class text-center">Div 1</div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3 my-div">
-        <div class="p-3 test-class text-center">Div 2</div>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-3 my-div">
-        <div class="p-3 test-class text-center">Div 3</div>
+  <div class="row full-height-row">
+    <div class="col-md-6 col-lg-4 mb-3 my-div">
+      <div class="p-3 test-class text-center">
+        <div class="mb-5">
+          <strong>Bankverbindung:</strong> <br>
+          Förderverein der Alt-Lankwitzer Grundschule <br>
+          Deutsche Bank <br>
+          IBAN: DE 41 1007 0024 0845 8747 00 <br>
+          BIC: DEUTDEDBBER
+        </div>
+        <div>
+          <strong>Mitgliederantrag</strong>
+        </div>
       </div>
     </div>
+    <div class="col-md-6 col-lg-4 mb-3 my-div">
+      <div class="p-3 test-class text-center">Div 2</div>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-3 my-div">
+      <div class="p-3 test-class text-center">Div 3</div>
+    </div>
+  </div>
 </div>
 {% endblock %}
