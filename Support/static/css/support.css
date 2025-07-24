@@ -42,6 +42,7 @@ html, body {
 .left-align {
   text-align: justify;
 }
+
  /* hr styling */
 .custom-hr {
   border: 0.5px dotted #ac0c5b; 
