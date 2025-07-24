@@ -32,6 +32,12 @@ html, body {
     justify-content: center;
   }
 
+
+  .more-space {
+  line-height: 2;
+}
+
+
   /* media queries */
   @media (min-width: 1400px) {
   .my-div {
