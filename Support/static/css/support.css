@@ -37,6 +37,10 @@ html, body {
   line-height: 2;
 }
 
+.left-align {
+  text-align: justify;
+}
+
 
   /* media queries */
   @media (min-width: 1400px) {
