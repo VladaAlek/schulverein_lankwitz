@@ -7,20 +7,23 @@
 
 
 {% block content %}
-    {% for erfolg  in erfolge %}
-    <div class="col-12 col-md-6 col-lg-4 container-fluid img-container">
-        <div class="date-div my-2">
-            <div class="img-title text-center mb-3">
-            <h4>{{ erfolg.title }} &nbsp;-&nbsp; {{ erfolg.jahr }}</h4>
+<div class="container">
+  <div class="row">
+    {% for erfolg in erfolge %}
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+      <div class="card h-100 text-center mt-4">
+        <div class="card-header bg-light mb-4">
+          <h5 class="mb-0">{{ erfolg.title }} &nbsp;-&nbsp; {{ erfolg.jahr }}</h5>
         </div>
-        <div>{{ erfolg.inhalt }}</div>
-        <img class="img-style" src="{{ erfolg.url }}" alt="{{ erfolg.title }}">
-        
-        
+        <div class="img-container">
+            <img class="card-img-top img-style" src="{{ erfolg.image.url }}" alt="{{ erfolg.title }}">
+        </div>
+        <div class="card-body">
+          <p class="card-text">{{ erfolg.inhalt }}</p>
+        </div>
+      </div>
     </div>
-    
     {% endfor %}
+  </div>
 </div>
-
-
 {% endblock %}
