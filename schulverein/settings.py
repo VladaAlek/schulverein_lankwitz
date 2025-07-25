@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'home',
     'termine',
     'Support',
+    'galerie',
 ]
 
 
