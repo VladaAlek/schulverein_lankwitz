@@ -7,14 +7,25 @@
 
 
 {% block content %}
-{% for image in images %}
-<div class="col-12 col-md-6 col-lg-4">
-    <div>{{image.title}}</div>
-    <img src="{{ image.image.url }}" alt="{{ image.title }}">
-    <div>{{image.start_date}}</div>
-    <div>{{image.end_date}}</div>
-    <div>{{image.place}}</div>
+<div class="row">
+    <div class="col-12 text-center my-3">
+        <h3>Some Stupid Title or Not</h3>
+    </div>
+    {% for image in images %}
+    <div class="col-12 col-md-6 col-lg-4 container-fluid img-container">
+        <div class="img-title text-center mb-3">
+            <h4>{{ image.title }}</h4>
+        </div>
+        <img class="img-style" src="{{ image.image.url }}" alt="{{ image.title }}">
+        <div class="date-div my-2">
+            <div>{{ image.start_date }}</div>
+            <div>&nbsp;-&nbsp;</div>
+            <div>{{ image.end_date }}</div>
+        </div>
+        <div>{{ image.place }}</div>
+    </div>
+    {% endfor %}
 </div>
-{% endfor %}
+
 
 {% endblock %}
