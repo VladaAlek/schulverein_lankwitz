@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'galerie/css/galerie.css' %}">
+{% endblock %}
+
 
 {% block content %}
-<h2>Galerie</h2>
+<h2 class="test-gallery">Galerie</h2>
 <p>Welcome to the gallery!</p>
 {% endblock %}
