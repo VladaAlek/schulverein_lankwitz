@@ -7,6 +7,14 @@
 
 
 {% block content %}
-<h2 class="test-gallery">Galerie</h2>
-<p>Welcome to the gallery!</p>
+{% for image in images %}
+<div class="col-12 col-md-6 col-lg-4">
+    <div>{{image.title}}</div>
+    <img src="{{ image.image.url }}" alt="{{ image.title }}">
+    <div>{{image.start_date}}</div>
+    <div>{{image.end_date}}</div>
+    <div>{{image.place}}</div>
+</div>
+{% endfor %}
+
 {% endblock %}
